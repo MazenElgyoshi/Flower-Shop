@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazen Elgyoshi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div id="App">
+        <!-- start navbar------------------------------ -->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container">
+                        <a class="navbar-brand text-light" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <button class="nav-link active text-light mx-1"  aria-current="page" @click="path='Home'">Home</button>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-light mx-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Prodcuts
+                                    </a>
+                                <ul class="dropdown-menu text-light">
+                                    <li><button class="dropdown-item " @click="path='Products'" >Prodcut 1</button></li>
+                                    <li><a class="dropdown-item" >Prodcut 2</a></li>
+                                </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link text-light mx-1" @click="path='cardit'" >Cardit</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link text-light mx-1" @click="path='About us'" >About us</button>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End navbar------------------------------ -->
+        
+        <!-- start body------------------------------ -->
+
+    <div v-if="path=='Home'" class="container">
+    
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+            <h1>اجعل لحظاتك أجمل</h1>
+            <p>تسوق أجمل باقات الورد لإهداء من تحب</p>
+            <a href="#collections" class="btn">تسوق الآن</a>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="collections" id="collections">
+            <h2>باقات مميزة</h2>
+            <div class="collection-list">
+            <div class="collection-item">
+                <img src="https://res.cloudinary.com/dizexseir/image/upload/w_auto,c_limit,f_auto,q_auto/v1643894408/ProImages/o45cbe7ne3vtmi4mt0sc.jpg" style="height: 300px;" alt="باقات الحب">
+                <h3>باقات الحب</h3>
+                <p>ابتداءً من <span>$50 </span></p>
+            </div>
+            <div class="collection-item">
+                <img src="https://i.pinimg.com/736x/2b/03/30/2b0330be31645c8f7b495ab9e10a298a.jpg" style="height: 300px;" alt="باقات المناسبات">
+                <h3>باقات المناسبات</h3>
+                <p>ابتداءً من <span>$75 </span></p>
+            </div>
+            <div class="collection-item">
+                <img src="https://bayfreshflowers.ca/wp-content/uploads/2020/12/BSPB4408.jpg" style="height: 300px;" alt="باقات العمل">
+                <h3>باقات العمل</h3>
+                <p>ابتداءً من <span>$60 </span></p>
+            </div>
+            </div>
+        </section>
+
+        <!-- Daily Special -->
+        <section class="daily-special">
+            <h2>عرض اليوم الخاص</h2>
+            <p>باقات فاخرة بخصومات تصل إلى 30%</p>
+            <a href="#" class="btn">اطلب الآن</a>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>آراء العملاء</h2>
+            <div class="testimonial-list">
+            <div class="testimonial-item">
+                <p>أفضل باقة ورد وصلت بسرعة وكان التغليف رائعًا!</p>
+                <span>أحمد</span>
+            </div>
+            <div class="testimonial-item">
+                <p>أجمل الورود وأفضل خدمة!</p>
+                <span>نورة</span>
+            </div>
+            <div class="testimonial-item">
+                <p>جودة ممتازة واهتمام بالتفاصيل.</p>
+                <span>خالد</span>
+            </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+            <footer>
+                <div class="footer-container">
+                <!-- روابط التنقل الرئيسية -->
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">عن الموقع</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            
+                <!-- روابط التواصل الاجتماعي -->
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-icons">
+                    <a href="#" class="social-icon facebook"></a>
+                    <a href="#" class="social-icon twitter"></a>
+                    <a href="#" class="social-icon instagram"></a>
+                    <a href="#" class="social-icon linkedin"></a>
+                    </div>
+                </div>
+            
+                <!-- الاشتراك في النشرة الإخبارية -->
+                <div class="footer-section newsletter">
+                    <h4>اشترك في نشرتنا الإخبارية</h4>
+                    <form>
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني">
+                    <button type="submit" class="subscribe-button">اشترك</button>
+                    </form>
+                </div>
+                </div>
+                
+                <!-- حقوق الملكية -->
+                <div class="footer-bottom">
+                <p>© 2024 اسم الشركة. جميع الحقوق محفوظة.</p>
+                </div>
+            </footer>
+    </div>
+
+        <!-- End body------------------------------ -->
+
+
+
+        <!-- start prodcuts------------------------------ -->
+
+            <div v-else-if="path=='Products'" class="container my-3">
+                <div class="row">
+                    <div v-for="pro in products" class=  "col-md-6 col-lg-4 col-xl-3">
+                        <div class="card my-3" >
+                            <img :src="pro.image" style="height: 300px;" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">New Prodcut</h5>
+                                <div class="fw-bold">
+                                    price : {{pro.price}}
+                                </div>
+                                <div class="fw-bold my-2">
+                                    count : {{pro.count}}
+                                </div>
+                                <button @click="addToCard(pro)" :disabled="pro.count == 0" class="button text-center">
+                                    <span class="button_lg">
+                                        <span class="button_sl"></span>
+                                        <span class="button_text">Buy Now</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- End prodcuts------------------------------ -->
+
+        <!-- start card------------------------------ -->
+
+        <div v-else="path=='cardt'" class="container ">
+                <table class="table table-dark table-hover my-3">
+                    <tr>
+                        <td style="text-align: center;">name</td>
+                        <td style="text-align: center;">image</td>
+                        <td style="text-align: center;">price</td>
+                        <td style="text-align: center;">count</td>
+                        <td style="text-align: center;">total</td>
+                    </tr>
+                    <tr v-for="item in card">
+                        <td style="text-align: center;">{{item.pro.title}}</td>
+                        <td style="text-align: center;"><img :src="item.pro.image" style="height: 100px; width: 100px;" alt=""></td>
+                        <td style="text-align: center;">{{item.pro.price}}</td>
+                        <td style="text-align: center;">{{item.count}}</td>
+                        <td style="text-align: center;" >{{item.count * item.pro.price}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- End card------------------------------ -->
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="Scrpit/products.js"></script>
+    <script src="Scrpit/vue.global.js"></script>
+    <script src="Scrpit/jquery.min.js"></script>
+    <script src="Scrpit/main.js"></script>
+</body>
+</html>
